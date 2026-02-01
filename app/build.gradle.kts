@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "com.example.kanoon"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.kanoon"
         minSdk = 24
-        targetSdk = 35
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 
