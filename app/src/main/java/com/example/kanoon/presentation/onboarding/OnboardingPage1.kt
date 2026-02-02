@@ -11,13 +11,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController // اضافه شد
+import androidx.navigation.compose.rememberNavController // اضافه شد
 import com.example.kanoon.R
 import com.example.kanoon.presentation.component.BackgroundCurve
 
 @Composable
-fun OnboardingPage1() {
+fun OnboardingPage1(navController: NavHostController) {
 
     BackgroundCurve(size = 800.dp, offsetY = (-80).dp)
 
@@ -37,7 +40,14 @@ fun OnboardingPage1() {
                 .size(280.dp)
                 .offset(y = 60.dp)
         )
-        OnboardingBottomBar()
+        OnboardingBottomBar(
+            navController = navController,
+            textwelcome = stringResource(R.string.welcome_text),
+            text2 = stringResource(R.string.question_text),
+            textDescription = stringResource(R.string.description),
+            textNext = stringResource(R.string.start_text)
+        )
+
         Box(modifier = Modifier.weight(0.8f))
     }
 }
@@ -52,5 +62,7 @@ fun OnboardingPage1() {
 )
 @Composable
 private fun OnboardingPage1Preview() {
-    OnboardingPage1()
+    // رفع مشکل: ساخت یک navController مجازی برای نمایش در حالت Preview
+    val navController = rememberNavController()
+    OnboardingPage1(navController = navController)
 }

@@ -24,19 +24,19 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.example.kanoon.R
 
 @Composable
-fun OnboardingBottomBar() {
+fun OnboardingBottomBar(navController: NavHostController, textwelcome: String,text2: String,textDescription: String,textNext: String) {
 
 
     Text(
-        text = stringResource(id = R.string.welcome_text),
+        text =textwelcome,
         color = Color.Black,
         fontSize = 22.sp,
         fontWeight = FontWeight.Bold,
@@ -47,7 +47,7 @@ fun OnboardingBottomBar() {
     Spacer(modifier = Modifier.height(20.dp))
 
     Text(
-        text = stringResource(id = R.string.question_text),
+        text = text2,
         color = Color.Black,
         fontSize = 15.sp,
         fontWeight = FontWeight.Bold,
@@ -58,7 +58,7 @@ fun OnboardingBottomBar() {
     Spacer(modifier = Modifier.height(20.dp))
 
     Text(
-        text = stringResource(id = R.string.description),
+        text = textDescription,
         color = Color.Black,
         maxLines = 2,
         fontSize = 12.sp,
@@ -89,14 +89,14 @@ fun OnboardingBottomBar() {
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = stringResource(R.string.start_text),
+                    text = textNext,
                     modifier = Modifier.weight(1f),
                     color = Color.White,
                     fontSize = 20.sp
                 )
 
                 Button(
-                    onClick = { /* TODO */ },
+                    onClick = {navController.navigate("OnboardingPage2") },
                     shape = CircleShape,
                     modifier = Modifier.size(50.dp),
                     colors = ButtonDefaults.buttonColors(
@@ -105,7 +105,7 @@ fun OnboardingBottomBar() {
                     contentPadding = PaddingValues(0.dp)
                 ) {
                     Image(
-                        painter = painterResource(id = R.drawable.arrowright),
+                        painter = painterResource(id = R.drawable.arrow_right),
                         contentDescription = null,
                         modifier = Modifier.size(
                             30.dp
