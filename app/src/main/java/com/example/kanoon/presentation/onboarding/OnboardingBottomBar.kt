@@ -30,13 +30,20 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.example.kanoon.R
+import com.example.kanoon.ui.theme.OnboardingButtonBackground
+import com.example.kanoon.ui.theme.OnboardingCardBackground
 
 @Composable
-fun OnboardingBottomBar(navController: NavHostController, textwelcome: String,text2: String,textDescription: String,textNext: String) {
-
+fun OnboardingBottomBar(
+    navController: NavHostController,
+    welcomeTitle: String,
+    questionText: String,
+    description: String,
+    startButtonText: String
+) {
 
     Text(
-        text =textwelcome,
+        text = welcomeTitle,
         color = Color.Black,
         fontSize = 22.sp,
         fontWeight = FontWeight.Bold,
@@ -47,7 +54,7 @@ fun OnboardingBottomBar(navController: NavHostController, textwelcome: String,te
     Spacer(modifier = Modifier.height(20.dp))
 
     Text(
-        text = text2,
+        text = questionText,
         color = Color.Black,
         fontSize = 15.sp,
         fontWeight = FontWeight.Bold,
@@ -58,7 +65,7 @@ fun OnboardingBottomBar(navController: NavHostController, textwelcome: String,te
     Spacer(modifier = Modifier.height(20.dp))
 
     Text(
-        text = textDescription,
+        text = description,
         color = Color.Black,
         maxLines = 2,
         fontSize = 12.sp,
@@ -75,7 +82,7 @@ fun OnboardingBottomBar(navController: NavHostController, textwelcome: String,te
             .width(344.dp)
             .height(70.dp),
         colors = CardDefaults.cardColors(
-            containerColor = Color(0xFF71A9C0)
+            containerColor = OnboardingCardBackground
         ),
         shape = RoundedCornerShape(16.dp)
     ) {
@@ -89,7 +96,7 @@ fun OnboardingBottomBar(navController: NavHostController, textwelcome: String,te
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = textNext,
+                    text = startButtonText,
                     modifier = Modifier.weight(1f),
                     color = Color.White,
                     fontSize = 20.sp
@@ -100,7 +107,7 @@ fun OnboardingBottomBar(navController: NavHostController, textwelcome: String,te
                     shape = CircleShape,
                     modifier = Modifier.size(50.dp),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color(0xFFF2C94C),
+                        containerColor = OnboardingButtonBackground,
                     ),
                     contentPadding = PaddingValues(0.dp)
                 ) {

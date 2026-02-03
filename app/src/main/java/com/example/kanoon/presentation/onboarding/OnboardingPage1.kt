@@ -42,10 +42,10 @@ fun OnboardingPage1(navController: NavHostController) {
         )
         OnboardingBottomBar(
             navController = navController,
-            textwelcome = stringResource(R.string.welcome_text),
-            text2 = stringResource(R.string.question_text),
-            textDescription = stringResource(R.string.description),
-            textNext = stringResource(R.string.start_text)
+            welcomeTitle = stringResource(R.string.onboarding_welcome_title),
+            questionText = stringResource(R.string.onboarding_question),
+            description = stringResource(R.string.app_description),
+            startButtonText = stringResource(R.string.onboarding_button_start)
         )
 
         Box(modifier = Modifier.weight(0.8f))
