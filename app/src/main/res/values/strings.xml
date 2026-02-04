@@ -1,7 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">کانون</string>
     <string name="app_description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است.</string>
     <string name="onboarding_welcome_title">به کانون هوشمند خوش آمدید</string>
     <string name="onboarding_question">کانون هوشمند کجاست؟</string>
+    <string name="onboarding_instruction">چطور انجام میشه؟</string>
+    <string name="onboarding_placeholder">لورم ایپسوم</string>
     <string name="onboarding_button_start">شروع کنیم</string>
+    <string name="onboarding_benefits">مزایای این کار چیه؟</string>
 </resources>

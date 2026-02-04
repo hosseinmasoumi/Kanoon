@@ -23,6 +23,7 @@ import com.example.kanoon.ui.theme.OnboardingCardBackground
 @Composable
 fun OnboardingActionCard(
     startButtonText: String,
+    okButtonText: String,
     onNavigationClick: () -> Unit
 ) {
     Card(
@@ -52,7 +53,10 @@ fun OnboardingActionCard(
                     fontSize = 20.sp
                 )
 
-                OnboardingNavigationButton(onClick = onNavigationClick)
+                OnboardingNavigationButton(
+                    onClick = onNavigationClick,
+                    okButtonText = okButtonText
+                )
             }
         }
     }

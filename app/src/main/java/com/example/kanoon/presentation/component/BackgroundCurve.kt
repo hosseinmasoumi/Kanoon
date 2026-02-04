@@ -20,7 +20,9 @@ import com.example.kanoon.R
 fun BackgroundCurve(
     size: Dp = 400.dp,
     offsetX: Dp = 0.dp,
-    offsetY: Dp = 0.dp
+    offsetY: Dp = 0.dp,
+    imageRes: Int = R.drawable.ellipse3,
+    contentScale: ContentScale = ContentScale.Fit
 ) {
     Box(
         modifier = Modifier
@@ -29,9 +31,9 @@ fun BackgroundCurve(
     ) {
         // بک‌گراند منحنی
         Image(
-            painter = painterResource(id = R.drawable.ellipse1),
+            painter = painterResource(id = imageRes),
             contentDescription = null,
-            contentScale = ContentScale.FillHeight,
+            contentScale = contentScale,
             modifier = Modifier
                 .size(size)
                 .offset(x = offsetX, y = offsetY)

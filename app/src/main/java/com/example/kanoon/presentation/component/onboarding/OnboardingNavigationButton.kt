@@ -15,7 +15,8 @@ import com.example.kanoon.ui.theme.OnboardingButtonBackground
 
 @Composable
 fun OnboardingNavigationButton(
-    onClick: () -> Unit
+    onClick: () -> Unit,
+    okButtonText: String
 ) {
     Button(
         onClick = onClick,
@@ -28,7 +29,7 @@ fun OnboardingNavigationButton(
     ) {
         Image(
             painter = painterResource(id = R.drawable.arrow_right),
-            contentDescription = null,
+            contentDescription = okButtonText,
             modifier = Modifier.size(30.dp)
         )
     }

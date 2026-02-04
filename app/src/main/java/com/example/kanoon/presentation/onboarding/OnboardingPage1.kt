@@ -23,7 +23,7 @@ import com.example.kanoon.presentation.component.onboarding.OnboardingBottomBar
 @Composable
 fun OnboardingPage1(navController: NavHostController) {
 
-    BackgroundCurve(size = 800.dp, offsetY = (-80).dp)
+    BackgroundCurve(size = 800.dp, offsetY = (-80).dp,imageRes = R.drawable.ellipse1)
 
     Column(
         modifier = Modifier
@@ -47,7 +47,9 @@ fun OnboardingPage1(navController: NavHostController) {
             welcomeTitle = stringResource(R.string.onboarding_welcome_title),
             questionText = stringResource(R.string.onboarding_question),
             description = stringResource(R.string.app_description),
-            startButtonText = stringResource(R.string.onboarding_button_start)
+            startButtonText = stringResource(R.string.onboarding_button_start),
+            okButtonText = "باشه",
+            nextPage = "OnboardingPage2"
         )
 
         Box(modifier = Modifier.weight(0.8f))

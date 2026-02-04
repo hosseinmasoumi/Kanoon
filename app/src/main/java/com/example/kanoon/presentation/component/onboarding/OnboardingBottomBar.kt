@@ -9,7 +9,9 @@ fun OnboardingBottomBar(
     welcomeTitle: String,
     questionText: String,
     description: String,
-    startButtonText: String
+    startButtonText: String,
+    okButtonText: String,
+    nextPage: String
 ) {
     OnboardingTitleSection(
         welcomeTitle = welcomeTitle,
@@ -18,7 +20,8 @@ fun OnboardingBottomBar(
     )
 
     OnboardingActionCard(
+        okButtonText = okButtonText,
         startButtonText = startButtonText,
-        onNavigationClick = { navController.navigate("OnboardingPage2") }
+        onNavigationClick = { navController.navigate(nextPage) }
     )
 }

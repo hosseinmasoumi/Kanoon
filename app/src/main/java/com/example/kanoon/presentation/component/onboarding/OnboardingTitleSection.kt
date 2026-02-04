@@ -44,7 +44,7 @@ fun OnboardingTitleSection(
         text = description,
         color = Color.Black,
         maxLines = 2,
-        fontSize = 12.sp,
+        fontSize = 15.sp,
         fontWeight = FontWeight.Bold,
         textAlign = TextAlign.Center,
         modifier = Modifier.offset(y = 120.dp)
