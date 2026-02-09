@@ -14,7 +14,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             KanoonTheme {
-                val navController = rememberNavController()
+               val navController = rememberNavController()
                 AppNavigator(navController = navController)
             }
         }
