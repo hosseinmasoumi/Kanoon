@@ -8,7 +8,7 @@
       <SelectionState runConfigName="SignupStep3ScreenPreview">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="SignupStep3ScreenPreview (1)">
+      <SelectionState runConfigName="LoginScreenOtpPreview">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>
