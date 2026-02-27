@@ -8,4 +8,7 @@
     <string name="onboarding_placeholder">لورم ایپسوم</string>
     <string name="onboarding_button_start">شروع کنیم</string>
     <string name="onboarding_benefits">مزایای این کار چیه؟</string>
+    <string name="signup_otp_message">یه کد ۵ رقمی برات فرستادیم؛ واردش کن تا بریم داخل.</string>
+    <string name="signup_otp_confirm">تایید</string>
+    <string name="signup_otp_resend">۱:۵۶ تا ارسال دوباره کد</string>
 </resources>
